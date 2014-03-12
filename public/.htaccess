@@ -1,0 +1,27 @@
+#AuthUserFile /www/sites/lotteryrewards.com/.htpasswd
+#AuthType Basic
+#AuthName "Private"
+#Require valid-user
+
+Options +FollowSymLinks
+#IndexIgnore */*
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+#To activate maintenance mode comment out the three commands above
+#and uncomment the commands below
+#RewriteBase /
+#RewriteCond %{REMOTE_ADDR} !^150\.101\.176\.237
+#RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+#RewriteCond %{REQUEST_URI} !^/mobile/img/logo\.png$
+#RewriteRule ^(.*)$ maintenance.html [R=307,L]
+
+</IfModule>
+

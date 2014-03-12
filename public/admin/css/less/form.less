@@ -1,0 +1,37 @@
+.select2-container {
+  width : 100%;
+
+  .select2-choice {
+    background-color : #FFFFFF;
+    background-image : none !important;
+    border           : 1px solid #CCCCCC !important;
+    border-radius    : 3px !important;
+    color            : #555555 !important;
+    height           : 34px !important;
+    line-height      : 1.42857;
+    padding          : 7px 0 0 10px !important;
+
+    .select2-arrow {
+      background-color : @default;
+      background-image : none !important;
+      border-radius    : 0 !important;
+
+      b {
+        background-position : 0 6px !important;
+      }
+    }
+  }
+
+  & .select2-dropdown-open {
+    .select2-choice {
+      border-color  : #5897FA !important;
+      border-radius : 3px 3px 0 0 !important;
+    }
+  }
+}
+
+.input-group-btn {
+  .btn {
+    height : 34px;
+  }
+}
